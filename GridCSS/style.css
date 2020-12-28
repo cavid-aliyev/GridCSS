@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background-color:rgb(37, 20, 54);
+}
+
+h1{
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+}
+
+h1, p{
+    color: white
+}
+
+/* note: 170px affect sidebar  */
+.grid-wrapper{
+    display: grid;
+
+    grid-template: 
+      [start] "header header" 150px [row2]
+      [row2] "aside content" 300px [row3] 
+      [row3] "footer footer" 100px [row-end] / 170px 1fr;
+
+
+      /* Second version */
+
+    /* grid-template-columns: 170px 1fr; 
+    grid-template-rows: 150px 500px 100px;
+    grid-template-areas: 
+    'header header'
+    "aside content"
+    'footer footer' ; */
+}
+
+.grid-header,
+.grid-aside,
+.grid-content,
+.grid-footer{
+    padding: 30px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    margin: 0px 0px 15px 0px;
+}
+
+.grid-header{
+    grid-area: header;
+}
+
+.grid-aside{
+    grid-area: aside;
+}
+
+.grid-content{
+    grid-area: content;
+}
+
+.grid-footer{
+    grid-area: footer;
+}
